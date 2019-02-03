@@ -1,0 +1,33 @@
+ <p>
+  apply works!
+</p> 
+<body>
+  <form #f="ngForm" (submit)="registration(f)">
+<table>
+  <tr>
+    <td>Name
+    </td>
+    <td>
+      <input type="text" name="username" id="name" [(ngModel)]="student.name"><br>
+  </tr>
+  <tr>
+    <td>password
+    </td>
+    <td>
+      <input type="text" name="password" id="password"[(ngModel)]="student.password"><br>
+  </tr>
+  
+  <tr>
+    <td>
+      <input type="submit" value="submit" name="submit"><br>
+    </td>
+  </tr>
+  <tr>
+
+    <td>
+      <input type="submit" value="reset" name="reset"><br>
+    </td>
+  </tr>
+</table>
+</form>
+</body>

@@ -3,26 +3,29 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LinkComponent } from './link/link.component';
 import { HeaderComponent } from './header/header.component';
-import { JespharComponent } from './jesphar/jesphar.component';
-import { HelloComponent } from './hello/hello.component';
-import { HelloworldComponent } from './helloworld/helloworld.component';
-import { ProfileComponent } from './profile/profile.component';
-
+import { ApplyComponent } from './apply/apply.component';
+import { LoggComponent } from './logg/logg.component';
+import {ServiceService} from './service.service';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
+    LinkComponent,
     HeaderComponent,
-    JespharComponent,
-    HelloComponent,
-    HelloworldComponent,
-    ProfileComponent
+    ApplyComponent,
+    LoggComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+      FormsModule,
+      HttpClientModule
+
   ],
-  providers: [],
+  providers: [ServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
