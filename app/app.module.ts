@@ -3,29 +3,26 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LinkComponent } from './link/link.component';
 import { HeaderComponent } from './header/header.component';
-import { ApplyComponent } from './apply/apply.component';
-import { LoggComponent } from './logg/logg.component';
-import {ServiceService} from './service.service';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { BookComponent } from './book/book.component';
+import { ListComponent } from './list/list.component';
+import { StudentComponent } from './student/student.component';
+import { StudentlistComponent } from './studentlist/studentlist.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    LinkComponent,
     HeaderComponent,
-    ApplyComponent,
-    LoggComponent
+    BookComponent,
+    ListComponent,
+    StudentComponent,
+    StudentlistComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-      FormsModule,
-      HttpClientModule
-
+    AppRoutingModule
   ],
-  providers: [ServiceService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

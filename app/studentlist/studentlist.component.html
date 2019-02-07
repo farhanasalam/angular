@@ -1,0 +1,13 @@
+<!-- <p>
+  studentlist works!
+</p> -->
+Selected rollno:{{selStudent.srollno}}
+<br/>Selected name:{{seStudent.sname}}
+<br/>Selected image:{{selStudent.simage}}
+<br/>Selected batch:{{selStudent.sbatch}}
+<br/>Selected department:{{selStudent.sdepartment}}
+<br/>
+<app-student [rollno]="item.rollno"
+[name]="item.name" [image]="item.image" 
+[batch]="item.batch" [department]="item.department"  
+*ngFor="let item of studentdetails"(sendstudent)="addstudent($event)"></app-student>
